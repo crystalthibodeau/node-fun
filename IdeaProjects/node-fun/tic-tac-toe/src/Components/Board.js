@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 import Row from "./Row";
-const Board = ({boxes}) => (
-    <div>
-        <h1>Board</h1>
-        <Row boxes={boxes}/>
-    </div>
-);
+
+const Board = ({rows}) => {
+    return (
+        <div>
+        rows.map((row, index) => <Row/>
+        </div>
+    )
+};
 export default Board;

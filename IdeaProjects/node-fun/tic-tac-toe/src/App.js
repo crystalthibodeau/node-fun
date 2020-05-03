@@ -1,29 +1,30 @@
 import React, {Component} from 'react';
-import './App.css';
 import cloneDeep from 'lodash.clonedeep';
+import './App.css';
+
 
 import Board from "./Components/Board.js";
 
 const rows = 3;
-const columns = 3;
-const row_array = new Array(rows).fill('');
-const col_array = new Array(columns).fill('');
-const grid = row_array.map(x => col_array.slice());
+const COLUMNS = 3;
+const ROW_ARRAY = new Array(rows).fill('');
+const COL_ARRAY = new Array(COLUMNS).fill('');
+const GRID = ROW_ARRAY.map(x => COL_ARRAY.slice());
 
 
 class App extends Component {
     state = {
-        boxes: cloneDeep(grid),
+        grid: cloneDeep(GRID),
     };
 
     render() {
-        const boxes = this.state;
-        console.log(boxes);
+        const grid = this.state;
+        console.log(grid);
         return (
-            <div className="App">
+            <div>
                 <h1>Tic Tac Toe!</h1>
                 <h3>Ready to play?</h3>
-                <Board boxes={boxes}/>
+                <Board rows={grid}/>
             </div>
         );
     }
