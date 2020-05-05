@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>Ready To Play?</h1>
+      <h1>Tic Tac Toe!</h1>
       <Board/>
     </div>
   );
@@ -12,9 +12,11 @@ function App() {
 
 function Square(props) {
   return (
-      <button className="square" onClick={props.onClick}>
-        {props.value}
-      </button>
+      <div>
+        <button className="square" onClick={props.onClick}>
+          {props.value}
+        </button>
+      </div>
   );
 }
 
@@ -50,9 +52,9 @@ function Board(){
   return(
       <div>
         <div className="status">{status}</div>
-        <div>{renderSquare(0)}{renderSquare(1)}{renderSquare(2)}</div>
-        <div>{renderSquare(3)}{renderSquare(4)}{renderSquare(5)}</div>
-        <div>{renderSquare(6)}{renderSquare(7)}{renderSquare(8)}</div>
+        <div className="div-row">{renderSquare(0)}{renderSquare(1)}{renderSquare(2)}</div>
+        <div className="div-row">{renderSquare(3)}{renderSquare(4)}{renderSquare(5)}</div>
+        <div className="div-row">{renderSquare(6)}{renderSquare(7)}{renderSquare(8)}</div>
       </div>
   )
 }
@@ -68,7 +70,7 @@ function calculateWinner(squares) {
     [2, 4, 6]
   ];
 
-  for(let i =0; i <winningLines.length; i++){
+  for(let i = 0; i < winningLines.length; i++){
     const [a, b, c] = winningLines[i];
     if(squares[a] && squares[a] === squares[b] && squares[b] === squares[c]){
       return squares[a];
