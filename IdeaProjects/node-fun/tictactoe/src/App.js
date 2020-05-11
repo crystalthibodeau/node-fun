@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <h1>Tic Tac Toe!</h1>
       <Board/>
+      <button onClick={Board()}>Play Again?</button>
     </div>
   );
 }
@@ -13,7 +14,7 @@ function App() {
 function Square(props) {
   return (
       <div>
-        <button className="square" onClick={props.onClick}>
+        <button className="square btn" onClick={props.onClick}>
           {props.value}
         </button>
       </div>
@@ -37,6 +38,8 @@ function Board(){
       setBoardSquares(squares);
 
       setXisNext(!xIsNext);
+
+
   };
 
   const renderSquare = (index) => {

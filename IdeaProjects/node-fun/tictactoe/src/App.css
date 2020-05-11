@@ -3,36 +3,27 @@
 }
 
 .square{
-  width: 10em;
-  height: 10em;
+  width: 10vw;
+  height: 10vw;
   border: 1px solid black;
-  /*font-size: 10px;*/
+  font-size: 4em;
+  font-weight: bold;
 }
 
 .div-row{
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
 }
-/*.App-header {*/
-/*  background-color: #282c34;*/
-/*  min-height: 100vh;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  font-size: calc(10px + 2vmin);*/
-/*  color: white;*/
-/*}*/
 
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
+.btn {
+  font-size: 14px;
+  color: #fff;
+  background-color: #3498db;
+  cursor: pointer;
+  transition: background-color .25s ease-in-out;
+}
 
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
+.btn:hover {
+  background-color: #2980b9;
+}
