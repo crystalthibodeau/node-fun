@@ -12,7 +12,7 @@ function App() {
 
 function Square(props) {
     return (
-        <div>
+        <div className="fill">
             <button className="square btn" onClick={props.onClick}>
                 {props.value}
             </button>
@@ -85,7 +85,7 @@ function Board() {
     }
 
     return (
-        <div>
+        <div className="parent">
             <div className="status">{status}</div>
             <div className="div-row">{renderSquare(0)}{renderSquare(1)}{renderSquare(2)}</div>
             <div className="div-row">{renderSquare(3)}{renderSquare(4)}{renderSquare(5)}</div>
