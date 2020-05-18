@@ -32,3 +32,13 @@
 .btn:hover {
   background-color: #2980b9;
 }
+
+.restart-button > button{
+  margin-top: 1em;
+  font-family: 'Balsamiq Sans', cursive;
+  width: 12vw;
+  /*height: 10vw;*/
+  border: 1px solid black;
+  font-size: 2em;
+  font-weight: bold;
+}
