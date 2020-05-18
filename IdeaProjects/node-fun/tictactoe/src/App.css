@@ -7,12 +7,20 @@ body {
     font-family: 'Balsamiq Sans', cursive;
 }
 
+.header-text{
+  color: white;
+  font-size: 3em;
+  margin: 0;
+  margin-top: .5em;
+}
 .color-white {
     color: white;
 }
 
 .status {
     color: white;
+    margin: .5em;
+    font-size: 2em;
 }
 
 .square {
@@ -22,6 +30,11 @@ body {
     border: 0; /*1px solid white;*/
     font-size: 4em;
     font-weight: bold;
+    transition: .25s ease-in-out;
+}
+
+.square:hover {
+    transform: scale(1.02);
 }
 
 .div-row {
@@ -43,11 +56,21 @@ body {
 }
 
 .restart-button > button {
+    color: white;
     margin-top: 1em;
+    padding: .4em;
     font-family: 'Balsamiq Sans', cursive;
-    width: 12vw;
-    /*height: 10vw;*/
-    border: 1px solid black;
-    font-size: 2em;
+    width: 15%;
+    border: 1px solid white;
+    background-color: #3498db;
+    border-radius: 20px;
+    font-size: 1.75em;
     font-weight: bold;
+    transition: .25s ease-in-out;
+}
+
+.restart-button > button:hover {
+    background-color: #2980b9;
+    transform: scale(1.06);
+    padding: .4em;
 }
