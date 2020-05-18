@@ -4,7 +4,7 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-            <h1>Tic Tac Toe!</h1>
+            <h1 className="color-white">Tic Tac Toe!</h1>
             <Board/>
         </div>
     );
@@ -12,11 +12,9 @@ function App() {
 
 function Square(props) {
     return (
-        <div className="fill">
             <button className="square btn" onClick={props.onClick}>
                 {props.value}
             </button>
-        </div>
     );
 }
 
