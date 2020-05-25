@@ -76,7 +76,7 @@ function Board() {
         status = 'Winner is: ' + winner;
     }
     else if (isBoardFull(boardSquares)) {
-        status = "Draw!";
+        status = "It's a DRAW!";
     }
     else {
         status = 'Up Next: ' + (xIsNext ? 'X' : 'O');
