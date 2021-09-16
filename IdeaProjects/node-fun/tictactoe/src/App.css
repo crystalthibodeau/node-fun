@@ -1,78 +1,81 @@
 body {
-    background-color: black;
+    background-color: #000;
+}
+.navbar, .container-fluid, .navbar-brand, .navbar-nav, .nav, .navbar-nav, .navbar-right{
+    margin: 0;
+    padding: 0;
+}
+.navbar-header{
+    padding-left: 15px;
+}
+.navbar-brand {
+    padding: 15px;
+    color: lightgray;
+    font-size: 2em;
+    float: left;
+    height: inherit;
+    line-height: inherit;
+}
+
+.navbar-nav>li>a {
+    line-height: inherit;
+}
+.nav>li>a {
+    display: block;
+}
+
+ nav ul li a {
+     color: lightgray;
+     font-size: 2em;
+ }
+
+nav ul li a:hover{
+    color: #5FFBFA;
+    background-color:#353535 !important;
+}
+
+nav {
+    background-color: #171719 !important;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-toggle:not(:checked) + .navbar-nav {
+        display: none;
+    }
 }
 
 .App {
     text-align: center;
-    font-family: 'Balsamiq Sans', cursive;
-}
-
-.header-text{
-  color: white;
-  font-size: 3em;
-  margin: 0;
-  margin-top: .5em;
-    text-decoration: underline;
-}
-.color-white {
-    color: white;
+    font-family: 'Nothing You Could Do', cursive;
 }
 
 .status {
-    color: white;
+    color: #5FFBFA;
     margin: .5em;
+    padding-top: 5%;
     font-size: 2em;
 }
 
 .square {
-    font-family: 'Balsamiq Sans', cursive;
+    font-family: 'Nothing You Could Do', cursive;
     width: 10vw;
     height: 10vw;
-    border: 0; /*1px solid white;*/
     font-size: 4em;
-    font-weight: bold;
-    transition: .25s ease-in-out;
+    background-color: rgba(30,30,33,0.76);
+    border: 5px solid #000;
+}
+.square:hover{
+        background-color: #353535;
 }
 
-.square:hover {
-    transform: scale(1.02);
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: #5FFBFA;
 }
 
 .div-row {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-}
-
-.btn {
-    color: #fff;
-    background-color: #3498db;
-    cursor: pointer;
-    border: 5px solid black;
-    transition: background-color .25s ease-in-out;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-}
-
-.restart-button > button {
-    text-decoration: underline;
-    color: white;
-    margin-top: 1em;
-    padding: .4em;
-    font-family: 'Balsamiq Sans', cursive;
-    width: 15%;
-    border: 1px solid white;
-    background-color: #3498db;
-    border-radius: 20px;
-    font-size: 1.75em;
-    font-weight: bold;
-    transition: .25s ease-in-out;
-}
-
-.restart-button > button:hover {
-    background-color: #2980b9;
-    transform: scale(1.06);
-    padding: .4em;
 }

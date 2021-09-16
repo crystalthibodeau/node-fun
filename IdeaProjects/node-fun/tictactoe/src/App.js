@@ -1,24 +1,15 @@
 import React, {useState} from 'react';
 import './App.css';
 
-function App() {
-    return (
-        <div className="App">
-            <h1 className="header-text">Tic Tac Toe!</h1>
-            <Board/>
-        </div>
-    );
-}
-
 function Square(props) {
     return (
-            <button className="square btn" onClick={props.onClick}>
-                {props.value}
-            </button>
+        <button className="square" onClick={props.onClick}>
+            {props.value}
+        </button>
     );
 }
 
-function Restart({ onClick }) {
+function Restart({onClick}) {
 
     return (
         <button className="restart" onClick={onClick}>
@@ -35,6 +26,7 @@ function Board() {
 
         const squares = [...boardSquares];
 
+
         if (calculateWinner(boardSquares) || squares[index]) {
             return;
         }
@@ -47,6 +39,7 @@ function Board() {
 
 
     };
+
     function isBoardFull(squares) {
         for (let i = 0; i < squares.length; i++) {
             if (squares[i] == null) {
@@ -55,6 +48,7 @@ function Board() {
         }
         return true;
     }
+
     const renderSquare = (index) => {
         return <Square value={boardSquares[index]} onClick={() => handleClick(index)}/>
     };
@@ -74,12 +68,10 @@ function Board() {
     const winner = calculateWinner(boardSquares);
     if (winner) {
         status = 'Winner is: ' + winner;
-    }
-    else if (isBoardFull(boardSquares)) {
+    } else if (isBoardFull(boardSquares)) {
         status = "It's a DRAW!";
-    }
-    else {
-        status = 'Up Next: ' + (xIsNext ? 'X' : 'O');
+    } else {
+        status = 'Up Next : ' + (xIsNext ? 'X' : 'O');
     }
 
     return (
@@ -88,7 +80,7 @@ function Board() {
             <div className="div-row">{renderSquare(0)}{renderSquare(1)}{renderSquare(2)}</div>
             <div className="div-row">{renderSquare(3)}{renderSquare(4)}{renderSquare(5)}</div>
             <div className="div-row">{renderSquare(6)}{renderSquare(7)}{renderSquare(8)}</div>
-            <div className="restart-button">{renderRestartButton()}</div>
+            {/*<div className="restart-button">{renderRestartButton()}</div>*/}
         </div>
     )
 }
@@ -113,5 +105,41 @@ function calculateWinner(squares) {
     }
     return null;
 }
+class Navbar extends React.Component{
+    render() {
+        return (
+            <nav className="navbar">
+                <div className="container-fluid">
+                    <div className="navbar-header">
+                        <p className="navbar-brand">
+                            Tic Tac Toe
+                        </p>
+                        <label htmlFor="menu-toggle" className="navbar-toggle collapsed">
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                        </label>
+                    </div>
+                    <input type="checkbox" id="menu-toggle" className="hidden"/>
+                    <ul className="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="">Play again</a>
+                            <renderRestartButton/>
 
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        );
+    }
+}
+
+function App() {
+    return (
+        <div className="App">
+            <Navbar/>
+            <Board/>
+        </div>
+    );
+}
 export default App;
