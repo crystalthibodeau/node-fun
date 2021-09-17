@@ -11,7 +11,7 @@ body {
 .navbar-brand {
     padding: 15px;
     color: lightgray;
-    font-size: 2em;
+    font-size: 4em;
     float: left;
     height: inherit;
     line-height: inherit;
@@ -26,7 +26,7 @@ body {
 
  nav ul li a {
      color: lightgray;
-     font-size: 2em;
+     font-size: 4em;
  }
 
 nav ul li a:hover{
@@ -35,7 +35,7 @@ nav ul li a:hover{
 }
 
 nav {
-    background-color: #171719 !important;
+    background-color: #292929 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -50,18 +50,18 @@ nav {
 }
 
 .status {
+    font-weight: bold;
     color: #5FFBFA;
     margin: .5em;
-    padding-top: 5%;
-    font-size: 2em;
+    font-size: 4em;
 }
 
 .square {
     font-family: 'Nothing You Could Do', cursive;
-    width: 10vw;
-    height: 10vw;
-    font-size: 4em;
-    background-color: rgba(30,30,33,0.76);
+    width: 12vw;
+    height: 12vw;
+    font-size: 10em;
+    background-color: #292929;
     border: 5px solid #000;
 }
 .square:hover{
